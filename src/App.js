@@ -4,7 +4,7 @@ import SingleColor from './SingleColor'
 import Values from 'values.js'
 
 function App() {
-  const [color, setColor] = useState('#1234EF');
+  const [color, setColor] = useState('#0000FF');
   const [error, setError] = useState(false);
   const [list, setList] = useState(new Values(color).all(10));
 

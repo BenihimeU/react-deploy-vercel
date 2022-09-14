@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import SingleColor from './SingleColor'
 
 import Values from 'values.js'
-
+const defaultColor = '#0000FF';
 function App() {
-  const [color, setColor] = useState('#0000FF');
+  const [color, setColor] = useState(defaultColor);
   const [error, setError] = useState(false);
   const [list, setList] = useState(new Values(color).all(10));
 
@@ -26,7 +26,7 @@ function App() {
       <h3>Color Generator</h3>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={e => setColor(e.target.value)}
-          placeholder="#1234EF"
+          placeholder={defaultColor}
           className={`${error ? 'error' : ''}`}
         ></input>
         <button type='submit' className='btn'>Submit</button>
